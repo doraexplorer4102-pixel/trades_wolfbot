@@ -1,7 +1,0 @@
-# Copy this file to ".env" and fill in your REAL values for local testing.
-# The real ".env" is ignored by git and must NEVER be committed or shared.
-# On Railway, set these same names in the Variables tab instead.
-
-BOT_TOKEN=your-new-telegram-bot-token-here
-DATABASE_URL=postgresql://user:password@host:port/dbname
-OWNER_ID=your-telegram-user-id-here
