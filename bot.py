@@ -622,7 +622,7 @@ async def reminder_scheduler_loop(bot):
                 if state is not None and state.get("step") == "done":
                     await asyncio.to_thread(db_delete_reminder, chat_id)
                     continue
-                next_num = (int(reminder_num) % 5) + 1
+                next_num = (int(reminder_num) % 4) + 1
                 await asyncio.to_thread(db_touch_reminder, chat_id, next_num)
                 asyncio.create_task(send_one_reminder(chat_id, bot, int(reminder_num)))
         except Exception as e:
