@@ -1132,6 +1132,9 @@ async def photo_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     elif update.message.document:
         fid = update.message.document.file_id
         await update.message.reply_text("DOCUMENT FILE ID:\n" + fid)
+    elif update.message.sticker:
+        fid = update.message.sticker.file_id
+        await update.message.reply_text("STICKER FILE ID:\n" + fid)
 
 async def message_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if update.message is None or not update.message.text:
@@ -1832,7 +1835,7 @@ async def main():
     for i in range(1, 6):
         tg_app.add_handler(CommandHandler(f"preview{i}", preview_reminder))
     tg_app.add_handler(CallbackQueryHandler(button_handler))
-    tg_app.add_handler(MessageHandler(filters.PHOTO | filters.VIDEO | filters.VIDEO_NOTE | filters.Document.ALL, photo_handler))
+    tg_app.add_handler(MessageHandler(filters.PHOTO | filters.VIDEO | filters.VIDEO_NOTE | filters.Document.ALL | filters.Sticker.ALL, photo_handler))
     tg_app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, message_handler))
 
     await tg_app.initialize()
