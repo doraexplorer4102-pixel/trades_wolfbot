@@ -660,14 +660,19 @@ async def run_start_sequence(chat_id, bot, state):
             chat_id=chat_id,
             photo=_seq1_photo,
             caption=(
-                f"<b>{E_TROPHY} You're Here Because You Want To Earn Money {E_MONEY}\n\n"
-                f"{E_HAND} Join My Free Channels {E_CHART} Below & Recover Your Lifetime Losses\n\n"
-                f"FREE CHANNEL LINK {E_DOWN}{E_DOWN}\n"
+                f"<b>🏆PAISA KAMANA HAI? TOH ABHI JOIN KARO! 💵\n\n"
+                f"🫴Mere Free Channel Mein Roz Milta Hai:\n\n"
+                f"✅Rozana 10-20 Signals 📈\n"
+                f"✅Non-Martingale Trades 🎯\n"
+                f"✅4-5 Trading Sessions Har Din 🔥\n"
+                f"✅High-Quality Trading Signals 🏆\n"
+                f"✅Beginners Ke Liye Bhi Aasan\n\n"
+                f"🫴FREE CHANNEL JOIN KARO 🫴\n\n"
                 f"{TG_CHANNEL}\n"
                 f"{TG_CHANNEL}\n"
                 f"{TG_CHANNEL}\n\n"
-                f"👆👆\n"
-                f'JOIN NOW BEFORE LINK EXPIRE <tg-emoji emoji-id="5395695537687123235">🚨</tg-emoji></b>'
+                f"🚨Jaldi Join Karo Aur Agla Signal Miss Mat Karo!\n\n"
+                f"@WOLF_BINARYSIGNALS🐺</b>"
             ),
             parse_mode=ParseMode.HTML
         ))
@@ -741,31 +746,17 @@ async def run_start_sequence(chat_id, bot, state):
             chat_id=chat_id,
             photo=_seq3_photo,
             caption=(
-                f"<b>"
-                f'<tg-emoji emoji-id="5431807687136395567">⏰</tg-emoji>'
-                f"DON\'T WASTE TIME \u2013 START EARNING DAILY PROFITS NOW "
-                f'<tg-emoji emoji-id="5224257782013769471">💰</tg-emoji>'
-                f'<tg-emoji emoji-id="5449800250032143374">🎁</tg-emoji>'
-                f"\n\n"
-                f'<tg-emoji emoji-id="5244837092042750681">📈</tg-emoji>'
-                f" Free Channel Benefits:\n\n"
-                f'<tg-emoji emoji-id="5206607081334906820">✅</tg-emoji>'
-                f" TRADER OF THE WEEK\n"
-                f'<tg-emoji emoji-id="5206607081334906820">✅</tg-emoji>'
-                f" DAILY 10-20 Accurate Trades\n"
-                f'<tg-emoji emoji-id="5206607081334906820">✅</tg-emoji>'
-                f" Copy-Paste Signals\n"
-                f'<tg-emoji emoji-id="5206607081334906820">✅</tg-emoji>'
-                f" Non-MTG | Compounding\n"
-                f'<tg-emoji emoji-id="5206607081334906820">✅</tg-emoji>'
-                f" Access to India\'s Top 1 Binary Trader Channel\n\n"
-                f"FREE CHANNEL LINK "
-                f'<tg-emoji emoji-id="5305522282695768654">👇</tg-emoji>'
-                f'<tg-emoji emoji-id="5305522282695768654">👇</tg-emoji>'
-                f"\n{TG_CHANNEL}\n{TG_CHANNEL}\n{TG_CHANNEL}\n\n"
-                f"\U0001f446\U0001f446\n"
-                f'JOIN NOW BEFORE LINK EXPIRE <tg-emoji emoji-id="5395695537687123235">🚨</tg-emoji>'
-                f"</b>"
+                f"<b>🐺PAISA KAMANA HAI? TOH ABHI JOIN KARO! 💵🔥\n\n"
+                f"🫴FREE SIGNALS GROUP MEIN MILTA HAI:\n\n"
+                f"✅Roz 10-20 Signals 📈\n"
+                f"✅Bina Martingale Ke Trades 🎯\n"
+                f"✅Roz 4-5 Sessions 🔥\n"
+                f"✅Asaan Entry & Exit Levels 📊\n"
+                f"✅Beginners Ke Liye Bilkul Easy 👌\n"
+                f"✅Risk Control Ka Proper Gyaan 💡\n\n"
+                f"🫴FREE CHANNEL JOIN KARO 🫴\n\n"
+                f"{TG_CHANNEL}\n{TG_CHANNEL}\n{TG_CHANNEL}\n\n"
+                f"@WOLF_BINARYSIGNALS🐺</b>"
             ),
             parse_mode=ParseMode.HTML
         ))
@@ -796,9 +787,14 @@ async def run_start_sequence(chat_id, bot, state):
         # Registration tutorial video
         _seq4_video = os.environ.get("SEQ4_VIDEO", "")
         _seq4_text = (
-            f"<b>{E_MONEY} Okay, So To Start Earning {E_MONEY} The First Step Is To Register "
-            f"A Trading Account {E_LINK}\n\n"
-            f"{E_HAND} Watch The Video & Just Click On Here {E_HAND}</b>"
+            f"<b>🐺VIP MEMBERS KO MILTA HAI PREMIUM SIGNALS! 🚀\n\n"
+            f"✅ 5-10+ Signals Ke Saat\n"
+            f"✅ 4-5 Sessions Roz Hothe Hai\n"
+            f"✅ Proper Entry & Exit Levels\n"
+            f"✅ Dedicated 24/7 Support\n\n"
+            f"🎁 Pehle FREE Channel Join Karo:\n"
+            f"{TG_CHANNEL}\n{TG_CHANNEL}\n{TG_CHANNEL}\n\n"
+            f"@WOLF_BINARYSIGNALS 🐺</b>"
         )
         if _seq4_video:
             await _safe_step(chat_id, "seq4 video", bot.send_video(
@@ -1028,6 +1024,23 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 parse_mode=ParseMode.HTML, reply_markup=support_keyboard()
             )
 
+        if BONUS_PHOTO:
+            _bonus_text = (
+                f"<b>50% DEPOSIT BONUS CODE FREE !! \n"
+                f"👑👑👑\n\n"
+                f"✅CREATE QUOTEX ACCOUNT WITH THIS LINK ⬇️\n\n"
+                f"🔗{AFFILIATE}\n\n"
+                f"🔗{AFFILIATE}\n\n"
+                f"✅Deposit minimum $150 & Get 50% Deposit Bonus 🤑🤤\n\n"
+                f'Just Enter the promo code -&gt; "WOLF50" at the time of Deposit\n\n'
+                f"⚠️ Promo codes can only be used by accounts created with this Link\n"
+                f"⬇️\n{AFFILIATE}</b>"
+            )
+            await context.bot.send_photo(
+                chat_id=chat_id, photo=BONUS_PHOTO, caption=_bonus_text,
+                parse_mode=ParseMode.HTML, reply_markup=bonus_keyboard()
+            )
+
     elif query.data == "try_again":
         state["step"] = "awaiting_id"
         _reg_photo = os.environ.get("REGISTERED_STEP_PHOTO", "")
@@ -1111,7 +1124,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
             await query.message.reply_text(
                 f"<b>{E_WARN} Bro, your balance shows <b>${dep:.2f}</b>! {E_CROSS}\n\n"
                 f"ID: <code>{uid}</code>\n\n"
-                f"{E_MONEY} Please deposit <b>$20 or more</b> and click Re-Check! {E_HAND}</b>",
+                f"{E_MONEY} Please deposit <b>${MIN_DEPOSIT} or more</b> and click Re-Check! {E_HAND}</b>",
                 parse_mode=ParseMode.HTML, reply_markup=recheck_keyboard()
             )
 
@@ -1336,11 +1349,11 @@ def smart_reply(text: str) -> str:
 
     # ── APP DOWNLOAD ───────────────────────────────────────────────────────────
     if any(w in t for w in ["quotex download","app download","app install","quotex app download","platform install","trading app download","kaise download"]):
-        return bold(f"{E_PHONE} Quotex App Download kaise kare?\n\n{E_RIGHT} Android: Play Store mein 'Quotex' search karo\n{E_RIGHT} iOS: App Store mein 'Quotex' search karo\n{E_RIGHT} Web: quotex.io pe jaao\n\nApp install karne ke baad Wolf ke link se register karo:\n{E_RIGHT} {REGISTER_LINK}\n\nCode  use karo — 50% bonus! {E_GIFT}")
+        return bold(f"{E_PHONE} Quotex App Download kaise kare?\n\n{E_RIGHT} Android: Play Store mein 'Quotex' search karo\n{E_RIGHT} iOS: App Store mein 'Quotex' search karo\n{E_RIGHT} Web: quotex.io pe jaao\n\nApp install karne ke baad Wolf ke link se register karo:\n{E_RIGHT} {REGISTER_LINK}\n\nCode WOLF50 use karo — 50% bonus! {E_GIFT}")
 
     # ── DOUBT / CONFUSION ──────────────────────────────────────────────────────
     if any(w in t for w in ["doubt hai","koi doubt","confusion hai","samajh nahi","kuch samajh","samajh nahi aaya","confuse hoon","clear nahi","sahi bata","sach bata","kya sahi hai"]):
-        return bold(f"{E_CHAT} Koi bhi doubt ho — poochho bhai! {E_HAPPY}\n\nMain yahan hoon help ke liye!\n\nYa directly contact karo:\n{E_RIGHT} {SUPPORT_USER}\n\nCommon doubts:\n{E_CHECK} VIP free hai? — Haan! Sirf $20 deposit\n{E_CHECK} Signals accurate? — well-reviewed\n{E_CHECK} Withdrawal hoga? — Bilkul!\n{E_CHECK} Experience chahiye? — Bilkul nahi!\n\nAur kya jaanna chahte ho? {E_FIRE}")
+        return bold(f"{E_CHAT} Koi bhi doubt ho — poochho bhai! {E_HAPPY}\n\nMain yahan hoon help ke liye!\n\nYa directly contact karo:\n{E_RIGHT} {SUPPORT_USER}\n\nCommon doubts:\n{E_CHECK} VIP free hai? — Haan! Sirf ${MIN_DEPOSIT} deposit\n{E_CHECK} Signals accurate? — well-reviewed\n{E_CHECK} Withdrawal hoga? — Bilkul!\n{E_CHECK} Experience chahiye? — Bilkul nahi!\n\nAur kya jaanna chahte ho? {E_FIRE}")
 
     # ── SHOULD I JOIN ──────────────────────────────────────────────────────────
     if any(w in t for w in ["join karna chahiye","mujhe join karna","mere liye sahi","kya join karu","joining sahi hai","join karna sahi","suggest karo","kya karu main","kya karoon","is it worth","worth it"]):
@@ -1352,11 +1365,11 @@ def smart_reply(text: str) -> str:
 
     # ── FREE SIGNALS ───────────────────────────────────────────────────────────
     if any(w in t for w in ["free signal","free mein signal","free signals chahiye","free wala signal","bina paisa signal","kya free signal"]):
-        return bold(f"{E_GIFT} Free signals ke liye Public Channel join karo!\n\n{E_RIGHT} {TG_CHANNEL}\n\nPublic channel mein:\n{E_CHECK} Kuch free signals\n{E_CHECK} Daily results\n{E_CHECK} Trading tips\n\nLekin FULL VIP signals ke liye:\n{E_CHECK} 10-20 daily signals\n{E_CHECK} a strong track record\n{E_CHECK} Personal guidance\n\nVIP join karo sirf $20 mein! {E_FIRE}\n\n{E_RIGHT} {REGISTER_LINK}")
+        return bold(f"{E_GIFT} Free signals ke liye Public Channel join karo!\n\n{E_RIGHT} {TG_CHANNEL}\n\nPublic channel mein:\n{E_CHECK} Kuch free signals\n{E_CHECK} Daily results\n{E_CHECK} Trading tips\n\nLekin FULL VIP signals ke liye:\n{E_CHECK} 10-20 daily signals\n{E_CHECK} a strong track record\n{E_CHECK} Personal guidance\n\nVIP join karo sirf ${MIN_DEPOSIT} mein! {E_FIRE}\n\n{E_RIGHT} {REGISTER_LINK}")
 
     # ── MINIMUM AMOUNT ─────────────────────────────────────────────────────────
     if any(w in t for w in ["minimum amount","kam se kam kitna","least amount","kitna se start","minimum kitna","minimum se","starting minimum"]):
-        return bold(f"{E_MONEY} Minimum deposit: $20 (approx Rs.1,700)\n\nPro tip:\n{E_GIFT} Code  use karo\n{E_CHECK} $20 deposit karo → $30 se trading!\n\nRecommended: $100 (Rs.8,000)\n{E_CHART} Better growth possible\n{E_SHIELD} Proper risk management\n\n{E_RIGHT} Register karo: {REGISTER_LINK}")
+        return bold(f"{E_MONEY} Minimum deposit: ${MIN_DEPOSIT}\n\nPro tip:\n{E_GIFT} Code  use karo\n{E_CHECK} 50% bonus milega WOLF50 code ke saath!\n\nRecommended: $100 (Rs.8,000)\n{E_CHART} Better growth possible\n{E_SHIELD} Proper risk management\n\n{E_RIGHT} Register karo: {REGISTER_LINK}")
 
     # ── LOSS RECOVERY ──────────────────────────────────────────────────────────
     if any(w in t for w in ["loss recover karna","loss recovery chahiye","loss wapas","ghata recover","paise wapas chahiye","loss cover","recovery chahiye"]):
@@ -1364,11 +1377,11 @@ def smart_reply(text: str) -> str:
 
     # ── HOW MUCH CAN I EARN ────────────────────────────────────────────────────  
     if any(w in t for w in ["kitna kamaoonga","kitna milega","kitna earn","kitna profit","how much earn","daily kitna","income kitni","how much can i make"]):
-        return bold(f"{E_MONEY} Kitna kama sakte ho?\n\nDepends on your capital:\n{E_CASH} $20 invest → variable results\n{E_CASH} $100 invest → variable results\n{E_CASH} $500 invest → variable results\n\nPehle mahine mein Results vary a lot from person to person and are never guaranteed. {E_CHART}\n\nCondition:\n{E_CHECK} Signals follow karo\n{E_CHECK} Risk management karo\n{E_CHECK} Emotional mat ho\n\n{E_RIGHT} Register: {REGISTER_LINK}")
+        return bold(f"{E_MONEY} Kitna kama sakte ho?\n\nDepends on your capital:\n{E_CASH} Results vary depending on capital and are never guaranteed\n\nPehle mahine mein Results vary a lot from person to person and are never guaranteed. {E_CHART}\n\nCondition:\n{E_CHECK} Signals follow karo\n{E_CHECK} Risk management karo\n{E_CHECK} Emotional mat ho\n\n{E_RIGHT} Register: {REGISTER_LINK}")
 
     # ── PAYMENT METHOD ─────────────────────────────────────────────────────────
     if any(w in t for w in ["payment kaise kare","payment method","kaise payment","payment options","payment mode","kitne payment","payment karte kaise"]):
-        return bold(f"{E_MONEY} Payment methods available hain:\n\n{E_CHECK} UPI (Google Pay, PhonePe, Paytm)\n{E_CHECK} Net Banking\n{E_CHECK} Cryptocurrency\n{E_CHECK} Trust Wallet\n{E_CHECK} Bank Transfer\n\nSabse easy: UPI se direct deposit!\n\nCode  use karo → 50% bonus! {E_GIFT}\n\n{E_RIGHT} Register: {REGISTER_LINK}")
+        return bold(f"{E_MONEY} Payment methods available hain:\n\n{E_CHECK} UPI (Google Pay, PhonePe, Paytm)\n{E_CHECK} Net Banking\n{E_CHECK} Cryptocurrency\n{E_CHECK} Trust Wallet\n{E_CHECK} Bank Transfer\n\nSabse easy: UPI se direct deposit!\n\nCode WOLF50 use karo → 50% bonus! {E_GIFT}\n\n{E_RIGHT} Register: {REGISTER_LINK}")
 
     # ── HOW LONG / TIME QUERIES ────────────────────────────────────────────────
     if any(w in t for w in ["kitna time lagta","kitne din mein","kab tak milega","kab milega","kab tak","time kitna lagta","kitne time","jaldi chahiye","turant chahiye"]):
@@ -1504,19 +1517,19 @@ def smart_reply(text: str) -> str:
     # ── VIP ────────────────────────────────────────────────────────────────────
     if any(w in t for w in ["vip mein kya","vip benefits","vip milta kya","vip access","vip membership","what is vip","vip group kya","vip mein milega"]):
         if lang == "english":
-            return bold(f"{E_CROWN} What's inside VIP?\n\n{E_CHECK} Daily 10-20 Sureshot Trading Signals\n{E_CHECK} Daily 5-10 Compounding Signals\n{E_CHECK} 100% NON-Martingale trades\n{E_CHECK} 5 Sessions daily\n{E_CHECK} Daily Trading Guidance\n{E_CHECK} Market Analysis\n{E_CHECK} News Time Trading Guidance\n{E_CHECK} Proper Trading Education\n{E_CHECK} Risk Management\n{E_CHECK} Live Support 24/7\n{E_CHECK} Lifetime Access\n{E_CHECK} an active community\n\nJoin FREE — just deposit $20! {E_DIAMOND}\n\n{E_RIGHT} Register: {REGISTER_LINK}")
-        return bold(f"{E_CROWN} VIP mein kya milta hai?\n\n{E_CHECK} Daily 10-20 Sureshot Trading Signals\n{E_CHECK} Daily 5-10 Compounding Signals\n{E_CHECK} 100% NON-Martingale trades\n{E_CHECK} 5 Sessions daily (Morning se Late Night)\n{E_CHECK} Daily Trading Guidance\n{E_CHECK} Market Analysis\n{E_CHECK} News Time Trading Guidance\n{E_CHECK} Proper Trading Education\n{E_CHECK} Risk Management\n{E_CHECK} Live Support 24/7\n{E_CHECK} Lifetime Access\n{E_CHECK} an active community\n\nFREE mein join karo — sirf $20 deposit karo! {E_DIAMOND}\n\n{E_RIGHT} Register: {REGISTER_LINK}")
+            return bold(f"{E_CROWN} What's inside VIP?\n\n{E_CHECK} Daily 10-20 Sureshot Trading Signals\n{E_CHECK} Daily 5-10 Compounding Signals\n{E_CHECK} 100% NON-Martingale trades\n{E_CHECK} 5 Sessions daily\n{E_CHECK} Daily Trading Guidance\n{E_CHECK} Market Analysis\n{E_CHECK} News Time Trading Guidance\n{E_CHECK} Proper Trading Education\n{E_CHECK} Risk Management\n{E_CHECK} Live Support 24/7\n{E_CHECK} Lifetime Access\n{E_CHECK} an active community\n\nJoin FREE — just deposit ${MIN_DEPOSIT}! {E_DIAMOND}\n\n{E_RIGHT} Register: {REGISTER_LINK}")
+        return bold(f"{E_CROWN} VIP mein kya milta hai?\n\n{E_CHECK} Daily 10-20 Sureshot Trading Signals\n{E_CHECK} Daily 5-10 Compounding Signals\n{E_CHECK} 100% NON-Martingale trades\n{E_CHECK} 5 Sessions daily (Morning se Late Night)\n{E_CHECK} Daily Trading Guidance\n{E_CHECK} Market Analysis\n{E_CHECK} News Time Trading Guidance\n{E_CHECK} Proper Trading Education\n{E_CHECK} Risk Management\n{E_CHECK} Live Support 24/7\n{E_CHECK} Lifetime Access\n{E_CHECK} an active community\n\nFREE mein join karo — sirf ${MIN_DEPOSIT} deposit karo! {E_DIAMOND}\n\n{E_RIGHT} Register: {REGISTER_LINK}")
 
     if any(w in t for w in ["vip join karna","join vip","vip kaise join","how to join vip","vip mein kaise","vip join karna hai","vip lena hai","joining kaise kare","join kaise kare","kaise join karu","group join karna","vip group join","membership kaise","vip membership lena","abhi join karna"]):
         if lang == "english":
-            return bold(f"{E_TROPHY} How to join VIP?\n\n3 simple steps:\n\n1{E_RIGHT} Register on Quotex using Wolf's referral link\n2{E_RIGHT} Deposit minimum $20 (use  for 50% bonus!)\n3{E_RIGHT} Send your Trader ID here\n\nVIP access granted instantly! {E_CHECK}\n\n{E_RIGHT} Register now: {REGISTER_LINK}")
-        return bold(f"{E_TROPHY} VIP kaise join kare?\n\n3 simple steps:\n\n1{E_RIGHT} Wolf ke referral link se Quotex pe register karo\n2{E_RIGHT} Minimum $20 deposit karo ( = 50% bonus!)\n3{E_RIGHT} Apna Trader ID yahan bhejo\n\nVIP access turant mil jaayega! {E_CHECK}\n\n{E_RIGHT} Abhi register karo: {REGISTER_LINK}")
+            return bold(f"{E_TROPHY} How to join VIP?\n\n3 simple steps:\n\n1{E_RIGHT} Register on Quotex using Wolf's referral link\n2{E_RIGHT} Deposit minimum ${MIN_DEPOSIT} (use WOLF50 for 50% bonus!)\n3{E_RIGHT} Send your Trader ID here\n\nVIP access granted instantly! {E_CHECK}\n\n{E_RIGHT} Register now: {REGISTER_LINK}")
+        return bold(f"{E_TROPHY} VIP kaise join kare?\n\n3 simple steps:\n\n1{E_RIGHT} Wolf ke referral link se Quotex pe register karo\n2{E_RIGHT} Minimum ${MIN_DEPOSIT} deposit karo (WOLF50 = 50% bonus!)\n3{E_RIGHT} Apna Trader ID yahan bhejo\n\nVIP access turant mil jaayega! {E_CHECK}\n\n{E_RIGHT} Abhi register karo: {REGISTER_LINK}")
 
     if any(w in t for w in ["vip lifetime","lifetime","vip expire","vip kitne din","vip validity","vip ka time","vip kabhi expire"]):
-        return bold(f"{E_PARTY} Khushkhabri bhai!\n\nWolf ka VIP LIFETIME hai!\n\nEk baar join karo — hamesha ke liye!\nKoi monthly fees nahi, koi renewal nahi! {E_DIAMOND}\n\nSirf ek baar $20 deposit → Lifetime VIP! {E_FIRE}")
+        return bold(f"{E_PARTY} Khushkhabri bhai!\n\nWolf ka VIP LIFETIME hai!\n\nEk baar join karo — hamesha ke liye!\nKoi monthly fees nahi, koi renewal nahi! {E_DIAMOND}\n\nSirf ek baar ${MIN_DEPOSIT} deposit → Lifetime VIP! {E_FIRE}")
 
     if any(w in t for w in ["vip subscription","monthly plan","monthly fee","vip ka plan","subscription kya","monthly charge"]):
-        return bold(f"{E_PARTY} VIP ka koi monthly subscription nahi hai bhai!\n\nSirf 3 steps:\n1{E_RIGHT} Mere referral link se account register karo\n2{E_RIGHT} Minimum $20 deposit karo\n3{E_RIGHT} Apni trading journey mere saath start karo\n\nLifetime access — ek baar aur hamesha! {E_DIAMOND}")
+        return bold(f"{E_PARTY} VIP ka koi monthly subscription nahi hai bhai!\n\nSirf 3 steps:\n1{E_RIGHT} Mere referral link se account register karo\n2{E_RIGHT} Minimum ${MIN_DEPOSIT} deposit karo\n3{E_RIGHT} Apni trading journey mere saath start karo\n\nLifetime access — ek baar aur hamesha! {E_DIAMOND}")
 
     if any(w in t for w in ["vip join ke baad kitne","same day","turant signal","kitne time mein signal","vip join ke baad pehla","first step vip","vip ke baad kya","vip join karne ke baad signal","signal kab milega","kitna time lagta","kitne time mein milega","jaldi milega","turant milega","vip join hone ke baad"]):
         return bold(f"{E_PARTY} VIP join karne ke baad!\n\nSame day se access milta hai! {E_CHECK}\nUsi din 5 sessions aur 10+ signals shuru!\n\nPehla step:\n1{E_RIGHT} Samjho ki Wolf signals kaise dete hain\n2{E_RIGHT} Demo account par signals try karo\n3{E_RIGHT} Confidence aane ke baad live pe aao\n\nDiscipline follow karo! {E_MUSCLE}")
@@ -1563,8 +1576,8 @@ def smart_reply(text: str) -> str:
     # ── DEPOSIT ────────────────────────────────────────────────────────────────
     if any(w in t for w in ["deposit","minimum deposit","kitna deposit","how much deposit","deposit karna","deposit kaise","amount deposit","deposit method","deposit karo","kitna lagana","paise kaise dalein","payment kaise","kitna time lagta deposit","minimum amount","kam se kam kitna","paisa dalna","paise bhejne"]):
         if lang == "english":
-            return bold(f"{E_MONEY} Deposit Information!\n\nMinimum: $20\n\nPro tip — use :\n{E_GIFT} Deposit $20 → Trade with $30! (50% bonus)\n\nDeposit methods:\n{E_CHECK} UPI / Paytm / PhonePe\n{E_CHECK} Net Banking\n{E_CHECK} Cryptocurrency\n{E_CHECK} Trust Wallet\n\nRecommended: $100 (Rs.8,000)\n\n{E_RIGHT} Register: {REGISTER_LINK}")
-        return bold(f"{E_MONEY} Deposit ki jaankari!\n\nMinimum: $20\n\nPro tip —  use karo:\n{E_GIFT} $20 deposit → $30 se trading! (50% bonus)\n\nDeposit methods:\n{E_CHECK} UPI / Paytm / PhonePe\n{E_CHECK} Net Banking\n{E_CHECK} Cryptocurrency\n{E_CHECK} Trust Wallet\n\nRecommended: $100 (Rs.8,000)\n\n{E_RIGHT} Abhi register karo: {REGISTER_LINK}")
+            return bold(f"{E_MONEY} Deposit Information!\n\nMinimum: ${MIN_DEPOSIT}\n\nPro tip — use WOLF50:\n{E_GIFT} 50% bonus on your deposit!\n\nDeposit methods:\n{E_CHECK} UPI / Paytm / PhonePe\n{E_CHECK} Net Banking\n{E_CHECK} Cryptocurrency\n{E_CHECK} Trust Wallet\n\nRecommended: $100 (Rs.8,000)\n\n{E_RIGHT} Register: {REGISTER_LINK}")
+        return bold(f"{E_MONEY} Deposit ki jaankari!\n\nMinimum: ${MIN_DEPOSIT}\n\nPro tip — WOLF50 use karo:\n{E_GIFT} 50% bonus milta hai deposit par!\n\nDeposit methods:\n{E_CHECK} UPI / Paytm / PhonePe\n{E_CHECK} Net Banking\n{E_CHECK} Cryptocurrency\n{E_CHECK} Trust Wallet\n\nRecommended: $100 (Rs.8,000)\n\n{E_RIGHT} Abhi register karo: {REGISTER_LINK}")
 
     if any(w in t for w in ["bonus","promo","code","discount","offer","noah50","50 percent","50%","bonus code","promo code","coupon"]):
         if lang == "english":
@@ -1572,7 +1585,7 @@ def smart_reply(text: str) -> str:
         return bold(f"{E_GIFT} 50% Bonus Code!\n\nCode: \n\nKaise use kare:\n1{E_RIGHT} Quotex pe deposit section mein jao\n2{E_RIGHT} Amount daalo\n3{E_RIGHT} Promo code: \n4{E_RIGHT} 50% extra balance! {E_PARTY}\n\n{E_WARN} Sirf Wolf ke link se register karne walo ko milega!\n\n{E_RIGHT} Abhi register karo: {REGISTER_LINK}")
 
     if any(w in t for w in ["recommend amount","kitne se start","starting amount","best amount","kitna lagaye","how much start","investment amount","kitna invest","ideal amount"]):
-        return bold(f"{E_CASH} Kitne se start kare?\n\nMinimum: $20 (VIP unlock)\nRecommended: $100 (Rs.8,000)\n\nKyun $100?\n{E_CHECK} Proper money management\n{E_CHECK} Better growth\n{E_CHECK} 1% risk = $1 per trade\n\nProfit estimates:\n{E_CASH} $20 → daily $10-20\n{E_CASH} $100 → daily $50-100\n{E_CASH} $500 → daily $200-500\n\nSmart start karo! {E_CHART}")
+        return bold(f"{E_CASH} Kitne se start kare?\n\nMinimum: ${MIN_DEPOSIT} (VIP unlock)\nRecommended: $100 (Rs.8,000)\n\nKyun $100?\n{E_CHECK} Proper money management\n{E_CHECK} Better growth\n{E_CHECK} 1% risk = $1 per trade\n\nResults vary depending on capital, session and market — never guaranteed.\n\nSmart start karo! {E_CHART}")
 
     # ── WITHDRAWAL ─────────────────────────────────────────────────────────────
     if any(w in t for w in ["withdraw","withdrawal","nikalna","paise nikalo","nikaalna","nikaal","cash out","paise bahar","withdrawal kaise","paise kaise nikale","nikalna kaise","kitne din mein","kab tak milega paise","withdrawal time","paise kab aayenge","payment kab milega"]):
@@ -1596,8 +1609,8 @@ def smart_reply(text: str) -> str:
     # ── REGISTRATION ───────────────────────────────────────────────────────────
     if any(w in t for w in ["register","registration","sign up","signup","account banao","account kaise","account banana","kaise banaye","new account","create account","account kholna"]):
         if lang == "english":
-            return bold(f"{E_KEY} How to Register?\n\nStep by step:\n\n1{E_RIGHT} Click Wolf's referral link\n2{E_RIGHT} Sign up with email or Google\n3{E_RIGHT} Verify account\n4{E_RIGHT} Deposit minimum $20\n5{E_RIGHT} Use code  (50% bonus)\n6{E_RIGHT} Copy your Trader ID\n7{E_RIGHT} Send it here\n\nVIP access instantly! {E_TROPHY}\n\n{E_RIGHT} Register: {REGISTER_LINK}")
-        return bold(f"{E_KEY} Register kaise kare?\n\nStep by step:\n\n1{E_RIGHT} Wolf ke referral link pe click karo\n2{E_RIGHT} Email ya Google se sign up karo\n3{E_RIGHT} Account verify karo\n4{E_RIGHT} Minimum $20 deposit karo\n5{E_RIGHT} Code  use karo (50% bonus)\n6{E_RIGHT} Apna Trader ID copy karo\n7{E_RIGHT} Yahan bhejo\n\nVIP access turant! {E_TROPHY}\n\n{E_RIGHT} Abhi register karo: {REGISTER_LINK}")
+            return bold(f"{E_KEY} How to Register?\n\nStep by step:\n\n1{E_RIGHT} Click Wolf's referral link\n2{E_RIGHT} Sign up with email or Google\n3{E_RIGHT} Verify account\n4{E_RIGHT} Deposit minimum ${MIN_DEPOSIT}\n5{E_RIGHT} Use code WOLF50 (50% bonus)\n6{E_RIGHT} Copy your Trader ID\n7{E_RIGHT} Send it here\n\nVIP access instantly! {E_TROPHY}\n\n{E_RIGHT} Register: {REGISTER_LINK}")
+        return bold(f"{E_KEY} Register kaise kare?\n\nStep by step:\n\n1{E_RIGHT} Wolf ke referral link pe click karo\n2{E_RIGHT} Email ya Google se sign up karo\n3{E_RIGHT} Account verify karo\n4{E_RIGHT} Minimum ${MIN_DEPOSIT} deposit karo\n5{E_RIGHT} Code WOLF50 use karo (50% bonus)\n6{E_RIGHT} Apna Trader ID copy karo\n7{E_RIGHT} Yahan bhejo\n\nVIP access turant! {E_TROPHY}\n\n{E_RIGHT} Abhi register karo: {REGISTER_LINK}")
 
     if any(w in t for w in ["trader id","id kahan","id kaha","id kaise","find id","id dhundna","id milega","8 digit","trader id kahan","id copy karo"]):
         return bold(f"{E_KEY} Trader ID kaise dhundhein?\n\n1{E_RIGHT} Quotex app ya website open karo\n2{E_RIGHT} Top left mein profile icon click karo\n3{E_RIGHT} 'My Account' mein jao\n4{E_RIGHT} 8-digit number dikhega — wahi Trader ID hai!\n\nExample: 12345678\n\nCopy karke yahan bhejo aur VIP unlock karo! {E_CHECK}")
@@ -1605,8 +1618,8 @@ def smart_reply(text: str) -> str:
     # ── HOW TO EARN ────────────────────────────────────────────────────────────
     if any(w in t for w in ["paise kaise","earn kaise","income kaise","paisa kaise","money kaise","kamana","kamayi","earning","kaise kamaye","paise kamao","how to earn","how to make money","make money","paisa banana","daily income","passive income","kitna kamaoonga","invest karna","paisa lagana","paise lagana","mujhe join karna","joining kaise","kaise join","join kaise karu"]):
         if lang == "english":
-            return bold(f"{E_MONEY} How to earn with trading?\n\nSimple steps:\n\n1{E_RIGHT} Register on Quotex with Wolf's link\n2{E_RIGHT} Deposit minimum $20 ( = 50% bonus!)\n3{E_RIGHT} Join VIP\n4{E_RIGHT} Get Wolf's signals\n5{E_RIGHT} Place trades and earn profit! {E_PARTY}\n\nVIP members earn variable, never guaranteed, amounts! {E_CHART}\n\n{E_RIGHT} Register: {REGISTER_LINK}")
-        return bold(f"{E_MONEY} Trading se paise kaise kamaye?\n\nStep by step:\n\n1{E_RIGHT} Quotex pe Wolf ke link se account banao\n2{E_RIGHT} Minimum $20 deposit karo ( = 50% bonus!)\n3{E_RIGHT} VIP join karo\n4{E_RIGHT} Wolf ke signals aate hain\n5{E_RIGHT} Trade lagao aur profit karo! {E_PARTY}\n\nVIP members daily trading with variable, never guaranteed, results! {E_CHART}\n\n{E_RIGHT} Register: {REGISTER_LINK}")
+            return bold(f"{E_MONEY} How to earn with trading?\n\nSimple steps:\n\n1{E_RIGHT} Register on Quotex with Wolf's link\n2{E_RIGHT} Deposit minimum ${MIN_DEPOSIT} (WOLF50 = 50% bonus!)\n3{E_RIGHT} Join VIP\n4{E_RIGHT} Get Wolf's signals\n5{E_RIGHT} Place trades and earn profit! {E_PARTY}\n\nVIP members earn variable, never guaranteed, amounts! {E_CHART}\n\n{E_RIGHT} Register: {REGISTER_LINK}")
+        return bold(f"{E_MONEY} Trading se paise kaise kamaye?\n\nStep by step:\n\n1{E_RIGHT} Quotex pe Wolf ke link se account banao\n2{E_RIGHT} Minimum ${MIN_DEPOSIT} deposit karo (WOLF50 = 50% bonus!)\n3{E_RIGHT} VIP join karo\n4{E_RIGHT} Wolf ke signals aate hain\n5{E_RIGHT} Trade lagao aur profit karo! {E_PARTY}\n\nVIP members daily trading with variable, never guaranteed, results! {E_CHART}\n\n{E_RIGHT} Register: {REGISTER_LINK}")
 
     # ── PROOF & RESULTS ────────────────────────────────────────────────────────
     if any(w in t for w in ["proof","results","dikhao","show proof","evidence","result dikhao","withdrawal proof","profit proof","show results","proof chahiye","proof kahan"]):
@@ -1667,7 +1680,7 @@ def smart_reply(text: str) -> str:
         return bold(f"{E_MONEY} Pehle mahine mein kitna profit?\n\nDiscipline ke saath:\nRs.1,000 se start → results vary and are never guaranteed.\n\n{E_CHECK} Proper compounding\n{E_CHECK} Saare signals follow\n{E_CHECK} Risk management\n{E_CHECK} Emotional mat ho\n\nResult tumhare discipline pe depend karta hai! {E_CHART}")
 
     if any(w in t for w in ["20 dollar","$20 profit","20 se profit","minimum se profit","chhoti amount profit"]):
-        return bold(f"{E_CASH} Honestly bhai — $20 se profit ho sakta hai! {E_CHECK}\n\nLekin $20 chhoti amount hai jahan:\n{E_WARN} Risk zyada hota hai\n{E_WARN} Profit comparatively kam\n\nRecommended start: $100 (Rs.8,000)\n\nJitna zyada capital, utna zyada growth! {E_CHART}")
+        return bold(f"{E_CASH} Honestly bhai — chhoti amount se bhi profit ho sakta hai, lekin results kabhi guaranteed nahi hote! {E_CHECK}\n\nChhoti amount mein:\n{E_WARN} Risk zyada hota hai\n{E_WARN} Growth room comparatively kam\n\nRecommended start: $100 (Rs.8,000)\n\nJitna zyada capital, utna zyada room to grow — but risk bhi utna hi real hai! {E_CHART}")
 
     # ── COMMUNITY ──────────────────────────────────────────────────────────────
     if any(w in t for w in ["youtube","videos dekho","yt link","youtube pe","youtube channel","subscribe"]):
@@ -1687,7 +1700,7 @@ def smart_reply(text: str) -> str:
 
     # ── FEES ───────────────────────────────────────────────────────────────────
     if any(w in t for w in ["free hai","koi fees","kuch charge","paid hai","fees lagti","charge karte","pay karna","course fees","vip fees","free mein milega","free hai kya","bilkul free","free wala","kitna paisa lagega","kya free hai"]):
-        return bold(f"{E_PARTY} Sab FREE hai bhai!\n\nthe team zindagi bhar FREE mein guidance aur educational content dete rahenge!\n\nKoi paid course nahi, koi force nahi!\n\nSirf: Wolf ke link se Quotex pe register karo + $20 deposit karo\n\nWoh $20 tumhara apna trading capital hai — koi fee nahi! {E_MUSCLE}\n\n{E_RIGHT} Register: {REGISTER_LINK}")
+        return bold(f"{E_PARTY} Sab FREE hai bhai!\n\nthe team zindagi bhar FREE mein guidance aur educational content dete rahenge!\n\nKoi paid course nahi, koi force nahi!\n\nSirf: Wolf ke link se Quotex pe register karo + ${MIN_DEPOSIT} deposit karo\n\nWoh deposit tumhara apna trading capital hai — koi fee nahi! {E_MUSCLE}\n\n{E_RIGHT} Register: {REGISTER_LINK}")
 
     if any(w in t for w in ["baad mein charge","future charge","baad mein fees","future mein paid","course bechoge","koi hidden"]):
         return bold(f"{E_CHECK} Nahi bhai! 100% nahi!\n\nthe team kabhi force karke koi paid course nahi bechenge!\n\nUnka goal sirf: FREE mein trading sikhana aur community build karna! {E_MUSCLE}")
