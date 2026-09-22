@@ -395,6 +395,7 @@ def register_keyboard():
 
 def deposit_keyboard():
     return InlineKeyboardMarkup([
+        [InlineKeyboardButton("🎁 Claim 50% Bonus NOW", callback_data="claim_bonus", style="success")],
         [InlineKeyboardButton("📹 How To Deposit (Tutorial)", callback_data="tutorial", style="primary")],
         [InlineKeyboardButton("🔄 I Have Deposited (Re-Check)", callback_data="deposited", style="danger")],
         [InlineKeyboardButton("💰 JOIN FREE CHANNEL", url=TG_CHANNEL, style="primary")],
@@ -442,6 +443,8 @@ def support_keyboard():
 def recheck_keyboard():
     return InlineKeyboardMarkup([
         [InlineKeyboardButton("💰 Deposit Now", url=AFFILIATE, style="danger")],
+        [InlineKeyboardButton("🎁 Claim 50% Bonus NOW", callback_data="claim_bonus", style="success")],
+        [InlineKeyboardButton("📹 How To Deposit (Tutorial)", callback_data="tutorial", style="primary")],
         [InlineKeyboardButton("🔄 I Have Deposited (Re-Check)", callback_data="deposited", style="success")],
         [InlineKeyboardButton("💰 JOIN FREE CHANNEL", url=TG_CHANNEL, style="primary")],
         [InlineKeyboardButton("✉️ Contact Support 24/7", url=SUPPORT, style="primary")],
@@ -1024,23 +1027,6 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 parse_mode=ParseMode.HTML, reply_markup=support_keyboard()
             )
 
-        if BONUS_PHOTO:
-            _bonus_text = (
-                f"<b>50% DEPOSIT BONUS CODE FREE !! \n"
-                f"👑👑👑\n\n"
-                f"✅CREATE QUOTEX ACCOUNT WITH THIS LINK ⬇️\n\n"
-                f"🔗{AFFILIATE}\n\n"
-                f"🔗{AFFILIATE}\n\n"
-                f"✅Deposit minimum $150 & Get 50% Deposit Bonus 🤑🤤\n\n"
-                f'Just Enter the promo code -&gt; "WOLF50" at the time of Deposit\n\n'
-                f"⚠️ Promo codes can only be used by accounts created with this Link\n"
-                f"⬇️\n{AFFILIATE}</b>"
-            )
-            await context.bot.send_photo(
-                chat_id=chat_id, photo=BONUS_PHOTO, caption=_bonus_text,
-                parse_mode=ParseMode.HTML, reply_markup=bonus_keyboard()
-            )
-
     elif query.data == "try_again":
         state["step"] = "awaiting_id"
         _reg_photo = os.environ.get("REGISTERED_STEP_PHOTO", "")
@@ -1085,14 +1071,20 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 parse_mode=ParseMode.HTML, reply_markup=_tut_kb,
             )
 
-    elif query.data == "claim_bonus_unused_placeholder_never_matches":
+    elif query.data == "claim_bonus":
         await context.bot.send_photo(
             chat_id=chat_id,
             photo=BONUS_PHOTO,
             caption=(
-                f"<b>{E_GIFT} placeholder {E_PARTY}\n\n"
-                f"{E_WARN} Only for accounts created using our link.\n\n"
-                f"{E_CHECK} After depositing, send your Trader ID or click 'I Have Deposited' {E_HAND}</b>"
+                f"<b>50% DEPOSIT BONUS CODE FREE !! \n"
+                f"👑👑👑\n\n"
+                f"✅CREATE QUOTEX ACCOUNT WITH THIS LINK ⬇️\n\n"
+                f"🔗{AFFILIATE}\n\n"
+                f"🔗{AFFILIATE}\n\n"
+                f"✅Deposit minimum $150 & Get 50% Deposit Bonus 🤑🤤\n\n"
+                f'Just Enter the promo code -&gt; "WOLF50" at the time of Deposit\n\n'
+                f"⚠️ Promo codes can only be used by accounts created with this Link\n"
+                f"⬇️\n{AFFILIATE}</b>"
             ),
             parse_mode=ParseMode.HTML, reply_markup=bonus_keyboard()
         )
