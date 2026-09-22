@@ -686,8 +686,8 @@ async def run_start_sequence(chat_id, bot, state):
                     chat_id=chat_id,
                     video_note=_seq1_vn,
                     reply_markup=InlineKeyboardMarkup([
-                        [InlineKeyboardButton("📈 FREE VIP GROUP", url=VIP_LINK, style="danger")],
-                        [InlineKeyboardButton("🎯 JOIN LOSS RECOVERY", url=VIP_LINK, style="primary")],
+                        [InlineKeyboardButton("📈 FREE CHANNEL", url=TG_CHANNEL, style="danger")],
+                        [InlineKeyboardButton("🎯 JOIN LOSS RECOVERY", url=TG_CHANNEL, style="primary")],
                         [InlineKeyboardButton("💬 CONTACT SUPPORT 24/7", url=SUPPORT, style="success")],
                     ])
                 )
@@ -1456,7 +1456,7 @@ def smart_reply(text: str) -> str:
         return bold(f"{E_HAPPY} Abhi tak the team offline meetups organise nahi karte!\n\nLekin future mein ho sakta hai!\n\nAbhi ke liye:\n{E_RIGHT} YouTube: {YOUTUBE}\n{E_RIGHT} Telegram: {SUPPORT_USER}\n{E_RIGHT} Channel: {TG_CHANNEL}")
 
     if any(w in t for w in ["trading book","course launch","paid course","book likhenge","training videos"]):
-        return bold(f"{E_BOOK} the team already educational content aur training videos provide kar chuke hain!\n\nAur sabse best baat — yeh FREE mein milta hai!\n\n{E_TV} YouTube Course (Basic to Advanced):\n{COURSE_LINK}\n\nVIP mein aur bhi advanced education milti hai! {E_DIAMOND}")
+        return bold(f"{E_BOOK} the team already educational content aur training videos provide kar chuke hain!\n\nAur sabse best baat — yeh FREE mein milta hai!\n\n{E_TV} Wolf ka YouTube: {YOUTUBE}\n\nVIP mein aur bhi advanced education milti hai! {E_DIAMOND}")
 
     if any(w in t for w in ["ek sentence advice","one advice","best advice","single advice","ek tip","ek baat"]):
         return bold(f"{E_CHAT} the team ki sabse best advice:\n\nKabhi haar mat maano, losses se daro mat, aur discipline ke saath seekhte raho.\n\n— the Wolf team {E_FIRE}")
@@ -1643,11 +1643,11 @@ def smart_reply(text: str) -> str:
     # ── EDUCATION ──────────────────────────────────────────────────────────────
     if any(w in t for w in ["beginner","naya hoon","naye hain","beginner hoon","new to trading","trading nahi aati","kuch nahi aata","zero knowledge","pehli baar","beginner kya kare","newbie","experience chahiye","experience nahi","naye logon ke liye","experience nahi hai","pehle kabhi nahi kiya","shuru kaise karu","kaise shuru karu","kahan se shuru","doubt hai","koi doubt","sahi hai kya","mere liye sahi","suggest karo","kya karoon","kya karu"]):
         if lang == "english":
-            return bold(f"{E_BOOK} New to trading? No worries!\n\nStep 1: Watch Wolf's YouTube for basics\nStep 2: Start with demo account (free!)\nStep 3: Join VIP for live guidance\n\nLearn these first:\n{E_BOOK} Money Management\n{E_BOOK} Risk Management\n{E_BOOK} Chart Patterns\n{E_BOOK} Candlestick Patterns\n{E_BOOK} Price Action\n\n{E_TV} Free Course: {COURSE_LINK}\n\nWolf helps beginners! {E_MUSCLE}")
-        return bold(f"{E_BOOK} Trading bilkul nahi aati? Tension mat lo!\n\nStep 1: Wolf ke YouTube se basics seekho\nStep 2: Demo account se practice karo\nStep 3: VIP join karo live guidance ke liye\n\nPehle yeh seekho:\n{E_BOOK} Money Management\n{E_BOOK} Risk Management\n{E_BOOK} Chart Patterns\n{E_BOOK} Candlestick Patterns\n{E_BOOK} Price Action\n\n{E_TV} Free Course: {COURSE_LINK}\n\nWolf beginners ko special guidance dete hain! {E_MUSCLE}")
+            return bold(f"{E_BOOK} New to trading? No worries!\n\nStep 1: Watch Wolf's YouTube for basics\nStep 2: Start with demo account (free!)\nStep 3: Join VIP for live guidance\n\nLearn these first:\n{E_BOOK} Money Management\n{E_BOOK} Risk Management\n{E_BOOK} Chart Patterns\n{E_BOOK} Candlestick Patterns\n{E_BOOK} Price Action\n\n{E_TV} Wolf's YouTube: {YOUTUBE}\n\nWolf helps beginners! {E_MUSCLE}")
+        return bold(f"{E_BOOK} Trading bilkul nahi aati? Tension mat lo!\n\nStep 1: Wolf ke YouTube se basics seekho\nStep 2: Demo account se practice karo\nStep 3: VIP join karo live guidance ke liye\n\nPehle yeh seekho:\n{E_BOOK} Money Management\n{E_BOOK} Risk Management\n{E_BOOK} Chart Patterns\n{E_BOOK} Candlestick Patterns\n{E_BOOK} Price Action\n\n{E_TV} Wolf ka YouTube: {YOUTUBE}\n\nWolf beginners ko special guidance dete hain! {E_MUSCLE}")
 
     if any(w in t for w in ["sabse pehle kya","first step","pehle kya","what to learn first","trading start kahan","shuru kahan se"]):
-        return bold(f"{E_BOOK} Pehle yeh seekho bhai!\n\n1{E_RIGHT} Money Management\n2{E_RIGHT} Risk Management\n3{E_RIGHT} Chart Patterns\n4{E_RIGHT} Candlestick Patterns\n5{E_RIGHT} Price Action\n\nYeh basics strong hone ke baad signals follow karo!\n\n{E_TV} Free Course: {COURSE_LINK}\n\nthe team VIP mein yeh sab sikhate hain! {E_FIRE}")
+        return bold(f"{E_BOOK} Pehle yeh seekho bhai!\n\n1{E_RIGHT} Money Management\n2{E_RIGHT} Risk Management\n3{E_RIGHT} Chart Patterns\n4{E_RIGHT} Candlestick Patterns\n5{E_RIGHT} Price Action\n\nYeh basics strong hone ke baad signals follow karo!\n\n{E_TV} Wolf ka YouTube: {YOUTUBE}\n\nthe team VIP mein yeh sab sikhate hain! {E_FIRE}")
 
     if any(w in t for w in ["price action","support resistance","breakout","reversal","sr levels"]):
         return bold(f"{E_BAR} Price Action Trading!\n\nPrice Action mein mainly:\n{E_CHECK} Support & Resistance identify karna\n{E_CHECK} Breakouts trade karna\n{E_CHECK} Reversals catch karna\n\nMarket ke major reaction zones aur rejection levels analyse karke S/R identify kiye jaate hain!\n\nthe team VIP mein detail mein sikhate hain! {E_FIRE}{E_DIAMOND}")
@@ -1676,10 +1676,10 @@ def smart_reply(text: str) -> str:
 
     # ── COMMUNITY ──────────────────────────────────────────────────────────────
     if any(w in t for w in ["youtube","videos dekho","yt link","youtube pe","youtube channel","subscribe"]):
-        return bold(f"{E_TV} Trading Wolf YouTube Channel!\n\n{E_RIGHT} {YOUTUBE}\n\nWahan milega:\n{E_CHECK} Free trading tutorials\n{E_CHECK} Live trading videos\n{E_CHECK} Success stories & proofs\n{E_CHECK} Market analysis\n{E_CHECK} Strategy videos\n\nAbhi: a growing YouTube audience! {E_TROPHY}\n\n{E_RIGHT} Free Course: {COURSE_LINK}\n\nSubscribe karo! {E_FIRE}")
+        return bold(f"{E_TV} Trading Wolf YouTube Channel!\n\n{E_RIGHT} {YOUTUBE}\n\nWahan milega:\n{E_CHECK} Free trading tutorials\n{E_CHECK} Live trading videos\n{E_CHECK} Success stories & proofs\n{E_CHECK} Market analysis\n{E_CHECK} Strategy videos\n\nAbhi: a growing YouTube audience! {E_TROPHY}\n\nSubscribe karo! {E_FIRE}")
 
     if any(w in t for w in ["course","playlist","basic to advance","trading course","free course","sikho trading"]):
-        return bold(f"{E_BOOK} Trading Wolf Free Course!\n\nBasic to Advanced — bilkul FREE!\n\n{E_RIGHT} Course Link:\n{COURSE_LINK}\n\nIs course mein milega:\n{E_CHECK} Trading basics\n{E_CHECK} Chart patterns\n{E_CHECK} Candlestick patterns\n{E_CHECK} Price action\n{E_CHECK} Risk management\n\nSabse pehle yeh course dekho! {E_FIRE}")
+        return bold(f"{E_BOOK} Abhi koi separate paid ya structured course nahi hai bhai!\n\nLekin FREE educational content YouTube pe milta hai:\n{E_RIGHT} {YOUTUBE}\n\nWahan milega:\n{E_CHECK} Trading basics\n{E_CHECK} Chart patterns\n{E_CHECK} Candlestick patterns\n{E_CHECK} Price action\n{E_CHECK} Risk management\n\nSubscribe karo! {E_FIRE}")
 
     if any(w in t for w in ["channel link","telegram link","public channel","community","group link","telegram channel","channel kahan","telegram group"]):
         return bold(f"{E_PHONE} Trading Wolf Telegram Community!\n\n{E_RIGHT} Public Channel:\n{TG_CHANNEL}\n\nCommunity: a growing Telegram community! {E_TROPHY}\n\nPublic channel mein:\n{E_CHECK} Daily trading results\n{E_CHECK} Free signals\n{E_CHECK} Member testimonials\n{E_CHECK} Live session updates\n\nAbhi join karo! {E_FIRE}")
